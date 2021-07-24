@@ -1,0 +1,126 @@
+AMI ROM Tool - AFUDOS
+
+Description :
+	AMI Firmware Update utility(APTIO) for DOS.
+
+
+Release Date :
+
+
+Source Control Location :	
+	SS: AptioV;$/AptioV/RomUtils/Afu/AfuDos;
+
+Reference Document :	
+	readme.txt
+	AMI_AptioV_AFU_User_Guide_NDA.pdf
+	
+Known Issues :
+    Use "/Rn" parameter will have no effect or caused an exception error, when 
+    the SMBIOS module version is between "4.6.1_ALPHA_01.26.2_DMIRW_TEST" and 
+    "(INT)4.6.1_ALPHA_01.29_Type39".
+
+Release Notes:
+==============================================================================
+5.07.01
+	[AFU][New]
+	01.Add error message for OEM CMD Checking module.	
+	02.Add support SMBIOS data in FV_DATA.
+	03.Add support /cmd: command.
+	04.Add support watchdog value restore.[EIP197706]
+	[AFU][FIX]
+	01.Fix oemcmd and cmd together use have crash issue. 
+	02.Fix oem get pattern of rom file debug message have not disabled.
+	03.Fix Windows driver.
+	[AFU][Modify]
+	01.Modify command: "/OAD", remove upload bin file to BIOS verify step.[[MY6] AFU tool /OAD fail]
+==============================================================================
+5.07.00
+	[AFU][New]
+	01.Add new's command /JBC.[EIP174535].
+	02.Add new's command /MEUL.[EIP174535].
+	03.Add new's feature /Recovery:<Path>, AFU will copy rom file to specified 
+	   directory.(Rom file can't auto delete.)
+	04.Add new's OFBD module Get Patten Module.[EIP159961]
+	05.Add new's capsule:0 ,AFU run capsule mode will enable shutdown step.
+	06.Add support Android OS AFU Linux Version.[EIP159621]
+	07.Add new hide command /b2.[EIP164320]
+
+	[AFU][Modify]
+	01.Modify disable all hide commands.
+	02.Modify command:"/d", show capsule header check string, form "ok/fail" to "Enable/Disable".
+	03.Modify printf flash message way, reduce the frequency of use of printf function.
+	04.Modify init platform step, AFU will priority use "Runtime memory hole".
+
+	[AFU][FIX]
+	01.Fix Aptio5 rom file have many _FVH string, it will cause AFU check FFS error.
+	02.Fix AFU can't show OFBD_CFG BIOS report error.
+	03.Fix update SLP key AFU will modify ffs attribute issue, this issue will cause 
+	   secure flash verify fail.[EIP162159]
+	04.Fix rom file check sum will cause AFU execute crash.
+	05.Fix hide command "/cmd:" /Axxx.bin + /cmd:{xxx} issue.
+	06.Fix hide command "/oemcmd:" /Axxx.bin + /oemcmd:xxx issue.
+
+	[WIN][Modify]
+	01.Modify add check driver version function.
+	02.Modify AFU only delete windows driver made by UCP produced, It will not delete all driver.
+
+	[WIN][FIX]
+	01.Fix when use UCP add driver into AFU. From another directory call AFU, It will decompress 
+	   into wrong directory, cause AFU can't find driver.
+
+	[WINGUI][FIX]
+	01.Fix AFUWINGUI use command /LR will show error message issue.
+	02.Fix AFUWINGUI have add rom file and add command. In command line, input command 
+	   run AFUWINGUI, it will show Unknown command message box.
+==============================================================================
+5.06.01
+	[AFU]
+	1.Fix Alignment RomHole block issue bring SLP2.0 offset calculate error.
+	2.After flash error, afu will add blank line continue print error message.
+	3.Add check aptio platform's feature.
+	4.Add new egm command sfmdt:n1:n2.[EIP151370]
+	5.Add new egm command preset:n.
+	6.Add new command /MEUL.
+	[AFU-WIN]
+	1.Fix when use ucp adding windows driver to AFU inside, afu will decompress to error path.
+	[Error Message]	
+	1.Error: Using the wrong AFU version, Please use Aptio 4 AFU.
+	2.Error: Using the wrong AFU version, Please use Aptio 5 AFU.
+==============================================================================
+5.06.00
+	[AFU]
+	1.Fix ECX erase szie issue.[EIP105071]
+	2.Fix UCP insert ROM file AFU can't open issue.
+	3.Fix command /OAD can't flash issue, when secure flash enable.
+	4.Fix, AFU can't find FID OA key issue, when ROM data have many _FVH string.
+	5.Fix When NVRAM is full, and SMIBIOS data in NVRAM, AFU can't preserve this data.
+	6.Fix When flash /p /b /n add /me command, AFU will not preserve need preserve data.
+	7.Fix When ROM Hole size exceed two block size, /holeout bin file is not right data.
+	8.Fix When new rom Rom Hole offset different old rom rom hole offset, use /p /b /n /ln, 
+	  ln rom hole data will be update to old rom offset.[EIP157284]
+	9.Modify Copright to 2014.
+	10.Modify when use command /ln, AFU check platform have not rom hole, AFU will show,
+	   "Error: Rom Hole not exist."
+
+	[Error Message Change]
+	1."Error: OA Data invalid." to "Error: OA key data is invalid."
+	2."Error: OA key is not NULL at all. And OA Key is the same as Bin File in system." to 
+	  "Error: OA key is not empty at all. And OA Key is the same as Bin File in system."
+	3."Error: OA key is NULL at all already." to "Error: OA key is empty at all already."
+	4."Error: OA key is not NULL at all. And OA Key is no the same as Bin File in system." to 
+	  "Error: OA key is not empty at all. And OA Key is no the same as Bin File in system."
+	5."Error: Unable to start a Secure Flash session." to "Error: Secure Flash Rom Verify fail."
+==============================================================================
+5.05.04
+	[AFU]
+	1.Fix SMBIOS Data can't restore, when SMBIOS Data in NVRAM and NVRAM is full. [EIP145538],[EIP145305]
+==============================================================================
+5.05.03
+	[AFU]
+	1.Change Version 3.05.02 to 5.05.03.
+	2.Fix check EC bin file header data return result error.
+	3.Fix Rom Hole does not Alignment block error.[EIP143348]
+
+	[AFUGUI-MFC]
+	1.Fix WINGUI Show OFBD ROM ID Check dialog issue.[ECR191374]
+	2.Fix WINGUI Show OFBD EC dialog issue.
