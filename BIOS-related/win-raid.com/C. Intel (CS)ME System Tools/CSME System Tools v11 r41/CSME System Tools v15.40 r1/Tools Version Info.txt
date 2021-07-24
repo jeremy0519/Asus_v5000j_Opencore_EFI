@@ -1,0 +1,20 @@
+Flash Image Tool (WIN32): 15.40.10.2268
+Flash Image Tool (LINUX64): 15.40.10.2268
+Flash Programming Tool (EFI64): 15.40.10.2268
+Flash Programming Tool (WIN32): 15.40.10.2268
+Flash Programming Tool (WIN64): 15.40.10.2268
+Flash Programming Tool (LINUX64): 15.40.10.2268
+FWUpdate (EFI64): 15.40.10.2268
+FWUpdate (WIN32): 15.40.10.2268
+FWUpdate (WIN64): 15.40.10.2268
+FWUpdate (LINUX64): 15.40.10.2268
+MEInfo (EFI64): 15.40.10.2268
+MEInfo (WIN32): 15.40.10.2268
+MEInfo (WIN64): 15.40.10.2268
+MEInfo (LINUX64): 15.40.10.2268
+MEManuf (EFI64): 15.40.10.2268
+MEManuf (WIN32): 15.40.10.2268
+MEManuf (WIN64): 15.40.10.2268
+MEManuf (LINUX64): 15.40.10.2268
+Manifest Extension Utility (WIN32): 15.40.10.2268
+Manifest Extension Utility (LINUX64): 15.40.10.2268

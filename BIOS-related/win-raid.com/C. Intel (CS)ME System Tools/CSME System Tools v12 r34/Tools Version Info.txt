@@ -1,0 +1,26 @@
+Flash Image Tool (WIN32): 12.0.70.1652
+Flash Programming Tool (DOS): 12.0.70.1652
+Flash Programming Tool (EFI64): 12.0.71.1681
+Flash Programming Tool (WIN32): 12.0.70.1652
+Flash Programming Tool (WIN64): 12.0.70.1652
+Flash Programming Tool (LINUX64): 12.0.70.1652
+FWUpdate (DOS): 12.0.70.1652
+FWUpdate (EFI64): 12.0.81.1760
+FWUpdate (WIN32): 12.0.81.1760
+FWUpdate (WIN64): 12.0.81.1760
+FWUpdate (LINUX64): 12.0.81.1760
+MEInfo (DOS): 12.0.70.1652
+MEInfo (EFI64): 12.0.81.1760
+MEInfo (WIN32): 12.0.81.1760
+MEInfo (WIN64): 12.0.81.1760
+MEInfo (LINUX64): 12.0.81.1760
+MEManuf (DOS): 12.0.70.1652
+MEManuf (EFI64): 12.0.71.1681
+MEManuf (WIN32): 12.0.81.1760
+MEManuf (WIN64): 12.0.81.1760
+MEManuf (LINUX64): 12.0.70.1652
+Clock Commander Tool (DOS): 12.0.30.7024
+Clock Commander Tool (EFI64): 12.0.30.7024
+Clock Commander Tool (WIN32): 12.0.30.7024
+Manifest Extension Utility (WIN32): 12.0.70.1652
+Manifest Extension Utility (LINUX64): 12.0.70.1652
